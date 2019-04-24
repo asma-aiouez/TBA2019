@@ -17,7 +17,6 @@ import com.example.tba_osa_2019.helper.HttpJsonParser;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -164,7 +163,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void goHomePage(){
         // Method to go user's profile
-        Intent intent = new Intent(this, HomePage.class);
+        Intent intent = new Intent(this, HomePageActivity.class);
         startActivity(intent);
     }
 

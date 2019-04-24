@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class HomePage extends LoginActivity {
+public class HomePageActivity extends LoginActivity {
     private Button addToCart;
     private Button goToProfile;
     private Button goToCart;
@@ -46,13 +46,13 @@ public class HomePage extends LoginActivity {
 
     public void goProfile(){
         // Method to go user's profile
-        Intent intent = new Intent(this, Profile.class);
+        Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
 
     public void goCart(){
         // Method to view shopping cart.
-        Intent intent = new Intent(this, ShoppingCart.class);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 }

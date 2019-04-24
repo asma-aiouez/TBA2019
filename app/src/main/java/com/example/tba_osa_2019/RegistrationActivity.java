@@ -4,9 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 import android.view.View;
@@ -23,7 +20,7 @@ import com.example.tba_osa_2019.helper.CheckNetworkStatus;
 import com.example.tba_osa_2019.helper.HttpJsonParser;
 
 
-public class Registration extends LoginActivity {
+public class RegistrationActivity extends LoginActivity {
     private static final String KEY_SUCCESS = "success";
     private static final String KEY_EMAIL = "email";
     private static final String KEY_PASSWORD = "password";
@@ -59,7 +56,7 @@ public class Registration extends LoginActivity {
                 if (CheckNetworkStatus.isNetworkAvailable(getApplicationContext())) {
                     AddCustomer();
                 } else {
-                    Toast.makeText(Registration.this,
+                    Toast.makeText(RegistrationActivity.this,
                             "Unable to connect to internet",
                             Toast.LENGTH_LONG).show();
 
@@ -85,7 +82,7 @@ public class Registration extends LoginActivity {
             address = addressEditText.getText().toString();
             new AddCustomerAsyncTask().execute();
         } else {
-            Toast.makeText(Registration.this,
+            Toast.makeText(RegistrationActivity.this,
                     "One or more fields left empty!",
                     Toast.LENGTH_LONG).show();
 
@@ -102,7 +99,7 @@ public class Registration extends LoginActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             //Display proggress bar
-            pDialog = new ProgressDialog(Registration.this);
+            pDialog = new ProgressDialog(RegistrationActivity.this);
             pDialog.setMessage("Adding Customer. Please wait...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(false);
@@ -138,7 +135,7 @@ public class Registration extends LoginActivity {
                 public void run() {
                     if (success == 1) {
                         //Display success message
-                        Toast.makeText(Registration.this,
+                        Toast.makeText(RegistrationActivity.this,
                                 "Customer Added", Toast.LENGTH_LONG).show();
                         Intent i = getIntent();
                         //send result code 20 to notify about movie update
@@ -148,7 +145,7 @@ public class Registration extends LoginActivity {
                         finish();
 
                     } else {
-                        Toast.makeText(Registration.this,
+                        Toast.makeText(RegistrationActivity.this,
                                 "Some error occurred while adding user",
                                 Toast.LENGTH_LONG).show();
 

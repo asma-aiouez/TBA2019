@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                     //Check for network connectivity
                     if (CheckNetworkStatus.isNetworkAvailable(getApplicationContext())) {
                         Intent i = new Intent(getApplicationContext(),
-                                Registration.class);
+                                RegistrationActivity.class);
                         startActivity(i);
                     } else {
                         //Display error message if not connected to internet
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     /*
     public void openRegistration(){
-        Intent intent = new Intent(this, Registration.class);
+        Intent intent = new Intent(this, RegistrationActivity.class);
         startActivity(intent);
     }
 

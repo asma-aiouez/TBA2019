@@ -21,11 +21,11 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.tba_osa_2019.Profile" />
-        <activity android:name="com.example.tba_osa_2019.ShoppingCart" />
-        <activity android:name="com.example.tba_osa_2019.HomePage" />
+        <activity android:name="com.example.tba_osa_2019.ProfileActivity" />
+        <activity android:name="com.example.tba_osa_2019.ShoppingCartActivity" />
+        <activity android:name="com.example.tba_osa_2019.HomePageActivity" />
         <activity android:name="com.example.tba_osa_2019.LoginActivity" />
-        <activity android:name="com.example.tba_osa_2019.Registration" />
+        <activity android:name="com.example.tba_osa_2019.RegistrationActivity" />
         <activity android:name="com.example.tba_osa_2019.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

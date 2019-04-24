@@ -1,14 +1,13 @@
 package com.example.tba_osa_2019;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 
-public class Profile extends LoginActivity {
+public class ProfileActivity extends LoginActivity {
     private Button cart;
     private Button orders;
     private Button changeAddress;
@@ -55,7 +54,7 @@ public class Profile extends LoginActivity {
     }
 
     public void goCart(){
-        Intent intent = new Intent(this, ShoppingCart.class);
+        Intent intent = new Intent(this, ShoppingCartActivity.class);
         startActivity(intent);
     }
 }
