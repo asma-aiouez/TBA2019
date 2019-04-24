@@ -8,8 +8,7 @@ import android.widget.TextView;
 
 
 public class ProfileActivity extends LoginActivity {
-    private Button cart;
-    private Button orders;
+
     private Button changeAddress;
     private Button changePass;
     private TextView email;
@@ -20,21 +19,6 @@ public class ProfileActivity extends LoginActivity {
 
         email = (TextView) findViewById(R.id.emailTestView);
         //email.setText(onlineCustomer.email);
-        cart = (Button) findViewById(R.id.cartProfile);
-        cart.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                goCart();
-            }
-        });
-
-        orders = (Button) findViewById(R.id.ordersProfile);
-        orders.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                //goOrders();
-            }
-        });
 
         changeAddress = (Button) findViewById(R.id.changeAddressProfile);
         changeAddress.setOnClickListener(new View.OnClickListener(){
