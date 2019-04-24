@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void test(){
+
+    }
+
     /*
     public void openRegistration(){
         Intent intent = new Intent(this, RegistrationActivity.class);
