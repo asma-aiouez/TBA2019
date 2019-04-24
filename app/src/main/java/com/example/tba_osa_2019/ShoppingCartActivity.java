@@ -37,6 +37,7 @@ public class ShoppingCartActivity extends LoginActivity {
             Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
     }
+
 }
 
 

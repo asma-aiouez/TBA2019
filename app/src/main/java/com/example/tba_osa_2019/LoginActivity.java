@@ -115,6 +115,7 @@ public class LoginActivity extends AppCompatActivity {
 
             try {
                 success = jsonObject.getInt(KEY_SUCCESS);
+                Log.w("success", success+"");
                 JSONObject user;
                 if (success == 1) {
                     //Parse the JSON response
@@ -150,10 +151,9 @@ public class LoginActivity extends AppCompatActivity {
                         setResult(20, i);
                         //Finish ths activity and go back to listing activity
                         goHomePage();
-
                     } else {
                         Toast.makeText(LoginActivity.this,
-                                "Some error occurred while logging in :(",
+                                "Sorry you need to register first :(",
                                 Toast.LENGTH_LONG).show();
 
                     }
@@ -161,11 +161,13 @@ public class LoginActivity extends AppCompatActivity {
             });
         }
     }
+
     public void goHomePage(){
         // Method to go user's profile
         Intent intent = new Intent(this, HomePageActivity.class);
         startActivity(intent);
     }
+
 
 }
 
